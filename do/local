@@ -1,0 +1,4 @@
+#!/bin/bash -e
+
+SCRIPTPATH=$(dirname "$0")
+docker-compose up --build
