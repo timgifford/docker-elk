@@ -48,6 +48,18 @@ services:
       - elk
     depends_on:
       - elasticsearch
+  
+  grafana:
+    build:
+      context: grafana/
+      args:
+        GRAFANA_VERSION: $GRAFANA_VERSION
+    ports:
+      - "3000:3000"
+    networks:
+      - elk
+    depends_on:
+      - elasticsearch
 
 networks:
 
